@@ -1,0 +1,30 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 129e0a5fba8edf94e753
+            client-secret: 5fb7a69e754f53ce15029e93e431dac10776156b
+            scope: jhackworth00@outlook.com
+            redirect-uri: http://localhost:8080/login/oauth2/code/github
+            client-name: Spring Boot App
+        provider:
+          github:
+            authorization-uri: https://github.com/login/oauth/authorize
+            token-uri: https://github.com/login/oauth/access_token
+            user-info-uri: https://api.github.com/user
+            user-name-attribute: name
+            jwk-set-uri:
+  spring:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/oauth2
+      username: root
+      password: Chiefy21!
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL8Dialect
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
